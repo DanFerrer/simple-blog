@@ -5,9 +5,9 @@ const commentSchema = new Schema({
   _author: {type: Schema.Types.ObjectId, ref: 'author'},
   content: { type: String, required: [true, 'Your comment must have content'] },
   dateAdded: { type: Date, default: Date.now, required: true },
-  dateUpdated: { type: Date },
+  dateUpdated: { type: Date }
 });
 
-const Comment = model('post', commentSchema);
+const Comment = model('comment', commentSchema);
 
 export default Comment;
